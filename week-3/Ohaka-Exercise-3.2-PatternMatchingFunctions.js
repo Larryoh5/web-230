@@ -9,22 +9,11 @@
 */
 
 
-/*
-  Expected output:
-  FirstName LastName
-  Exercise 3.2
-  Today's Date
-  // output from the match() function
-  false
-  true
-  // output from the if...else blocks
-  Truck and Car do not match!
-  Bike and Bike do match!
-  Four and Three do not match!
-*/
 
 //link to my header
 const header = require('../Ohaka-header.js');
+//header
+console.log(header.display('Larry', 'Ohaka', 'Exercise 3.2') + '\n');
 
 // These are my test variables
 var testVar1 = "Truck";

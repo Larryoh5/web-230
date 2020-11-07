@@ -17,16 +17,40 @@
   The enter key was pressed
 */
 
+//link to my header
+const header = require('../Ohaka-header.js');
+//header
+console.log(header.display('Larry', 'Ohaka', 'Exercise 3.3') + '\n');
+
+
+
+
+ // Variable used in proceeding switch statements.
 let eventKeyCode = 13
 
-if (eventKeyCode === 13) {
+
+// Switch statements with potentiel outputs dependent on  variable eventKeyCode's value
+switch (eventKeyCode) {
+  case 13:
   console.log('The enter key was pressed.')
-} else if (eventKeyCode === 16) {
+  break;
+
+  case 16:
   console.log('The shift key was pressed.')
-} else if (eventKeyCode === 32) {
+  break;
+
+  case 32:
   console.log('The spacebar key was pressed.')
-} else if (eventKeyCode === 8) {
+  break;
+
+  case 8:
   console.log('The backspace / delete key was pressed.')
-} else {
+  break;
+
+  default:
   console.log('Unrecognized key.')
+  break;
 }
+
+
+//end of exercise
