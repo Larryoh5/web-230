@@ -1,9 +1,9 @@
 /* ============================================
- ; Title: Objects Collections
+ ; Title: nested object Literals
 ; Author: Professor Krasso
-; Date:   17 November 2020
+; Date:   26 November 2020
 ; Modified By: Larry Ohaka
- ; Description: Keyed collection array with two errors
+ ; Description: Create an Object literal ticket with a nested object literal person
  ;===========================================
 */
 
