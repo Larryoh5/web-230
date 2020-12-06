@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<!--============================================
+; Title: Client SIde Javascript
+; Author: Professor Krasso
+; Date:   6 December 2020
+; Modified By: Larry Ohaka
+; Description: CLient Side Javascript
+;=========================================== -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 7.4</title>
+
+  <!-- you will need to the href to point to your root directories css file -->
+  <link rel="stylesheet" href="/path/to/your/root/css/file">
+
+</head>
+<body>
+  <h1>Computer Components</h1>
+
+  <table>
+    <!-- table headers -->
+    <thead>
+      <tr>
+        <th id = "header">Id</th>
+        <th id = "header">Name</th>
+        <th id = "header">Amount</th>
+        <th id = "header">Functions</th>
+      </tr>
+    </thead>
+    <!-- table data -->
+    <tbody>
+      <tr id = "gray">
+        <td>1</td>
+        <td>Laptop</td>
+        <td>1,500.99</td>
+        <!-- inline javascript alert and confirm functions -->
+        <td><a href="javascript:alert('1');">EDIT</a> | <a href="#" onclick="confirm('Are you sure?');">DELETE</a></td>
+      </tr>
+      <tr id = "blue">
+        <td>2</td>
+        <td>Motherboard</td>
+        <td>35.70</td>
+        <!-- inline javascript alert and confirm functions -->
+        <td><a href="javascript:alert('2');">EDIT</a> | <a href="#" onclick="confirm('Are you sure?');">DELETE</a></td>
+      </tr>
+      <tr id = "gray">
+        <td>3</td>
+        <td>Monitor</td>
+        <td>174.99</td>
+        <!-- Inline javascript alert and confirm functions -->
+        <td><a href="javascript:alert('3');">EDIT</a> | <a href="#" onclick="confirm('Are you sure?');">DELETE</a></td>
+      </tr>
+      <tr id = "blue">
+        <td>4</td>
+        <td>Mouse</td>
+        <td>13.99</td>
+        <!-- Inline javascript alert and confirm functions -->
+        <td><a href="javascript:alert('4');">EDIT</a> | <a href="#" onclick="confirm('Are you sure?');">DELETE</a></td>
+      </tr>
+      <tr id = "gray">
+        <td>5</td>
+        <td>Keyboard</td>
+        <td>14.50</td>
+        <!-- Inline javascript alert and confirm functions -->
+        <td><a href="javascript:alert('5');">EDIT</a> | <a href="#" onclick="confirm('Are you sure?');">DELETE</a></td>
+      </tr>
+    </tbody>
+  </table>
+<script>
+//link to my header
+const header = require('../Ohaka-header.js');
+//header
+console.log(header.display('Larry', 'Ohaka', 'Exercise 6.2') + '\n');
+</script>
+<!--Shopping list v2 background color-->
+<style>
+  #blue{
+    background-color: lightgray
+  }
+  #grey{
+    background-color: lightblue
+  }
+  #header{
+    background-color: #1E90FF;
+    color: white
+
+  }
+
+</style>
+</body>
+</html>
