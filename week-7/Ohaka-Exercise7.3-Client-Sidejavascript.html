@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--============================================
+; Title: Client SIde Javascript
+; Author: Professor Krasso
+; Date:   6 December 2020
+; Modified By: Larry Ohaka
+; Description: CLient Side Javascript
+;=========================================== -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 7.3</title>
+
+  <!-- you will need to the href to point to your root directories css file -->
+  <link rel="stylesheet" href="/path/to/your/root/css/file">
+</head>
+<body>
+  <script type="text/javascript">
+    // Html list of 5 fruits
+    document.write('<h1>SHOPPING LIST v.1</h1>' +
+    '<ol>' +
+    '<li>Oranges</li>' +
+    '<li>Apples</li>' +
+    '<li>Pears</li>' +
+    '<li>Limes</li>' +
+    '<li>Lemons</li>' +
+    '</ol>');
+  </script>
+
+<div id="list"></div>
+<script>
+  // Selector variable for "list"
+  const list = document.getElementById('list');
+
+  // Insert html table into list using  innerHTML
+  list.innerHTML = '<h1>SHOPPING LIST v.2</h1>' +
+  '<table>' +
+  '<thead>' +
+  '<tr>' +
+  '<th id = "header" >Id</th>' +
+  '<th id = "header">Item</th>' +
+  '</tr>' +
+  '</thead>' +
+  '<tbody>' +
+  '<tr>' +
+  '<td id = "blue">1</td>' +
+  '<td id = "blue">Oranges</td>' +
+  '</tr>' +
+  '<tr>' +
+  '<td id = "grey">2</td>' +
+  '<td id = "grey">Apples</td>' +
+  '</tr>' +
+  '<tr>' +
+  '<td id = "blue">3</td>' +
+  '<td id = "blue">Pears</td>' +
+  '</tr>' +
+  '<tr>' +
+  '<td id = "grey">4</td>' +
+  '<td id = "grey">Limes</td>' +
+  '</tr>' +
+  '<tr>' +
+  '<td id = "blue">5</td>' +
+  '<td id = "blue">Lemons</td>' +
+  '</tr>' +
+  '</tbody>' +
+  '</table>';
+</script>
+  <!--Shopping list v2 background color-->
+  <style>
+    #blue{
+      background-color: lightgray
+    }
+    #grey{
+      background-color: lightblue
+    }
+    #header{
+      background-color: #1E90FF;
+      color: white
+
+    }
+
+  </style>
+
+</body>
+</html>
+
