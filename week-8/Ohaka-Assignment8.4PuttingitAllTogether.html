@@ -1,0 +1,83 @@
+<!--
+===============================================
+; Title: Assignment 8.4
+; Author: Professor Krasso
+; Date: 13 December 2020
+; Description: Put it all together
+===============================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 8.4</title>
+
+  <!-- Jquery  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Root css file -->
+  <link rel="stylesheet" href="../site.css">
+  <!-- embedded css styles -->
+  <style type="text/css">
+    #emps tbody tr:hover {
+      cursor: pointer
+    }
+  </style>
+</head>
+<body>
+
+<!-- Table -->
+<div id="emps"></div>
+
+<!-- jQuery &  Javascript -->
+<script type="text/javascript">
+  // array of employee objects using custom object constructor
+  const employees = [
+    new Employee(1, 'Mike', 'Anderson', 'Programmer'),
+    new Employee(2, 'Tony', 'Jefferson', 'Data Analysts'),
+    new Employee(3, 'Terry', 'Crews', ' Front End Developer'),
+    new Employee(4, 'David', 'Clive', 'Project Manager'),
+    new Employee(5, 'Diana', 'Stephen', 'Software Developer')
+  ]
+
+  // Output variable for HTML table
+  let output = '<table><thead><tr><th>Id</th><th>First Name</th><th>First Name</th><th>Title</th></tr></thead><tbody>';
+
+  // Loops through employees array and adds data to the table
+  employees.forEach(function(employee) {
+    output += `<tr><td>${employee.id}</td><td>${employee.firstName}</td><td>${employee.lastName}</td><td>${employee.title}</td>`
+  })
+  // Adds closing tags
+  output += '</tbody></table>'
+  $('#emps').html(output);
+
+  // jQuery onclick
+  $(function () {
+    $("table tr").click(function () {
+      const empId = $(this).find('td:first').html();
+      getEmployee(empId);
+    })
+  });
+
+  /* Creates object with 4 properties
+  */
+  function Employee(id, firstName, lastName, title) {
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.title = title;
+  }
+
+  /* A displayed alert when employees id number matches argument
+  */
+  function getEmployee(idNum) {
+    let msg = '';
+    for (let i = 0; i < employees.length; i++) {
+      if (employees[i].id == idNum) {
+        msg = `${employees[i].id} ${employees[i].firstName} ${employees[i].lastName} ${employees[i].title}`
+        return alert(msg);
+      }
+    }
+  }
+</script>
+</body>
+</html>
