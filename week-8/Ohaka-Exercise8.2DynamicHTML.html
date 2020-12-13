@@ -1,0 +1,99 @@
+
+
+<!--
+============================================
+; Title:  Dynamic HTML
+; Author: Professor Krasso
+; Date:   12 December 2020
+; Description: Demonstrates Manipulation of HTML through data collection
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 8.2</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <body>
+
+<!-- uses pure CSS to create navbar -->
+<nav id="navbar"></nav>
+
+<!-- for the script -->
+<div id="fruits"></div>
+
+<!-- javascript -->
+<script>
+  // array of fruit objects
+  const fruits = [
+    {
+      id: 1,
+      type: 'Tangerine'
+    },
+    {
+      id: 2,
+      type: 'Melon'
+    },
+    {
+      id: 3,
+      type: 'Apple'
+    },
+    {
+      id: 4,
+      type: 'Mango'
+    },
+    {
+      id: 5,
+      type: 'Oranges'
+    }
+  ]
+
+  // Output variable attributed to html title with opening <ul> list
+  let output = '<h2>Fruits</h2><ul>';
+
+  // 'for' loop that concatenates <li> for each fruit
+  for (let i = 0; i < fruits.length; i++) {
+    output += `<li>${fruits[i].id}) ${fruits[i].type}</li>`;
+  }
+  // Closing '<ul>'
+  output += '</ul>';
+
+  // Output display of DOM
+  document.getElementById('fruits').innerHTML = output;
+</script>
+
+ <!-- CSS -->
+ <style type="text/css">
+  body {
+    /* Roboto 300,400,500 */
+    font-family: 'Roboto', sans-serif;
+    /* Reduce whitespace */
+    padding: 0;
+    margin: 0;
+  }
+
+  #navbar {
+    background-color: #6495ED;
+    height: 40px;
+    /* creates space between nav and list */
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-left: 15px;
+  }
+
+  ul {
+    list-style: none;
+    /* Centers ul */
+    margin:  auto;
+  }
+</style>
+</head>
+
+
+</body>
+</html>
